@@ -1,53 +1,79 @@
-.banner{
-    /* background-image: url('https://wallpaperaccess.com/full/2703652.png'); */
+.banner {
+    height: 85vh;
+    width: 100%;
+    /* background-position: center; */
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 448px;
     color: white;
-    
-}
-
-.banner .content{
-    padding-top: 140px;
-    height: 190px;
-    padding-left: 15px;
-}
-.title{
-    font-size: 3rem;
-    font-weight:800;
-    padding-bottom: 0.3rem;
-
-}
-.banner-buttons{
-
-}
-.button{
-    color: white;
-    outline: none;
+    -webkit-box-shadow: inset 0px -159px 300px 162px rgba(18,18,18,1);
+  -moz-box-shadow: inset 0px -159px 300px 162px rgba(18,18,18,1);
+  box-shadow: inset 0px -159px 300px 162px rgba(18,18,18,1);
+  }
+  .banner-sec-1 {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    gap: 20px;
+  }
+  .banner-sec-1 button {
+    width: 130px;
+    height: 45px;
+    background-color: #ffffff;
+    color: #121212;
     border: none;
-    font-weight: 700;
+    outline: none;
+    font-size: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 650;
     border-radius: 5px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: rgba(51, 51,51, 0.5);
     cursor: pointer;
-    margin-right: 1rem;
-}
+    transition: 0.3s ease;
+  }
+  .banner-sec-1 button .icon{
+      font-size: 1.3rem;
+  }
 
-.button:hover{
-    color: black;
-    background-color: #e6e6e6;
-}
-.description{
-    width: 45rem;
-    line-height: 1.3;
-    padding-top: 1 rem;
-    font-size: 0.8rem;
-    height: 80px;
-    max-width: 360px;
-}
-.fade-bottom{
-    height: 7.4rem;
-    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
-}
+  .banner-sec-1 button:hover{
+    opacity: 60%;
+  }
+
+  .banner-sec-1 button:last-child {
+    background-color: #9e9e9e4f;
+    color: white;
+  }
+  .banner-sec-1 .btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    
+  }
+  
+
+  .banner-sec-2 .btns:hover {
+
+  }
+
+  .banner-sec-1 p {
+    max-width: 500px;
+    line-height: 25px;
+    font-size: .9rem;
+    color: rgb(213, 213, 213);
+
+  }
+  .banner-sec-1 h1 {
+    font-size: 4rem;
+  }
+  .banner-sec-1 h4 {
+    font-size: 1.3rem;
+  }
+  .banner-sec-1 h4 span {
+    font-weight: 300;
+    color: darkgrey;
+ 
+  }
+  

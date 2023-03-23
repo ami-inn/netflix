@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=Courgette&family=Kanit&family=Mukta:wght@600;800&family=Passion+One&family=Poppins&display=swap');
+
 .row{
-    margin-left: 20px;
+    
     color: #fff;
 
 }
 
 .row .posters{
     display: flex;
+    gap: 10px;
     padding: 20px;
     overflow-x: scroll;
     overflow-y: hidden;
+    
 
 }
 
@@ -19,48 +23,126 @@
 .poster{
     cursor: pointer;
     max-height: 250px;
-    margin-right: 10px;
-    -webkit-animation: scaledown .2s ease;
-    animation-fill-mode: forwards;
-    transform-origin: 50% 50%;
+    margin-right:10px; 
+    
+}
+
+.image{
+    position: relative;
+    cursor: pointer;
 
 }
 
-.poster:hover{
-    z-index: 100;
-    -webkit-animation: scale 0.3s ease ;
-    animation: scale 0.3s  linear;
-    animation-fill-mode: forwards;
-    transform-origin: 50% 50%;
+.image img{
+    display: block;
+    
 }
 
-@keyframes scaledown {
-    0% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
 
-    }
-    100% {
-        -webkit-transform: scale(1.0);
-        transform: scale(1.0);
-    }
+.content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
 }
 
-@keyframes scale{
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        box: shadow 10px 10px 60px 10px rgba(0, 0, 0, 0.3);
-    }
+.content:hover{
+    opacity: 1;
 }
+
+.content h5{
+    font-size: 20px;
+    color: rgba(238, 213, 110, 0.904);
+    text-align: center;
+    margin-bottom: 15px;
+}
+.content p{
+    max-width: 300px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
 
 .small-poster{
-    cursor: pointer;
+  
     max-height: 180px;
     border-radius: 10px;
     margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.image-zoom{
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.image-zoom img{
+    transition:all 0.5s ease ;
+}
+
+.image-zoom:hover img{
+    transform: scale(1.1);
+}
+
+.originals{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    min-width: 450px;
+    height: 250px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s ease;
+    
+}
+
+
+
+.originals h5{
+   
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+.originals p{
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(193, 193, 193);
+    opacity: 0;
+}
+
+.originals:hover h5{
+    opacity: 1;
+}
+
+.originals:hover p{
+    opacity: 1;
+}
+
+.originals:hover{
+    transform: scale(1.06);
 }

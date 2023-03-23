@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kanit&family=Mukta:wght@600;800&family=Passion+One&family=Poppins&display=swap');
 
 
 .navbar{
@@ -11,16 +11,40 @@
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    background-color: #111;
+    background-color: #000000;
+    z-index: 100;
 
 
      
 
 }
+.left-side{
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 80px;
+    text-transform: capitalize;
+    color: rgb(208, 208, 208);
+}
+.left-side .nav-links{
+    display: flex;
+    gap: 15px;
+    
+}
+.right-side{
+    display: flex;
+    gap: 30px;
+}
+
+.right-side .icons{
+    font-size: 15px;
+    color: white;
+}
 
 .navbar .logo{
-    position:fixed;
-    left: 20px;
+    /* position:fixed;
+    left: 20px; */
     width: 80px;
 }
 .navbar .avatar{
